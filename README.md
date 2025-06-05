@@ -39,7 +39,7 @@ Scrapuncle is a web-based scrap pickup management platform designed to connect c
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Muhammad-Hassan-522//Scrapuncle.git
+   git clone https://github.com/Muhammad-Hassan-522/Scrapuncle.git
    cd Scrapuncle
 
 2. **Configure the Database**
