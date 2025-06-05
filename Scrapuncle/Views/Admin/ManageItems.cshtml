@@ -1,0 +1,350 @@
+﻿@{
+	ViewData["Title"] = "Manage Scrap Items";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-3 py-4">
+	<!-- header -->
+	<div class="d-flex justify-content-between align-items-center mb-4">
+		<h2 class="fw-bold text-dark mb-0">Manage Scrap Items</h2>
+		<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addItemModal">
+			<i class="bi bi-plus-circle"></i> Add New Item
+		</button>
+	</div>
+
+	<!-- search + filter -->
+	<div class="row mb-4 g-3">
+		<div class="col-md-6">
+			<input type="text" class="form-control" placeholder="Search items..." id="itemSearch">
+		</div>
+
+		<div class="col-md-3">
+			<select class="form-select" id="categoryFilter">
+				<option value="">All Categories</option>
+				<option value="Normal Recyclables">Normal Recyclables</option>
+				<option value="Large Appliances">Large Appliances</option>
+				<option value="Small Appliances">Small Appliances</option>
+				<option value="Mobiles & Computers">Mobiles & Computers</option>
+				<option value="Others">Others</option>
+			</select>
+		</div>
+		<div class="col-md-3">
+			<button class="btn btn-outline-secondary w-100" id="resetFilters">Reset Filters</button>
+		</div>
+	</div>
+
+	<!-- items -->
+	<div class="card border-0 shadow-sm">
+		<div class="card-body p-0">
+			<div class="table-responsive">
+				<table class="table table-hover mb-0">
+					<thead class="table-light">
+						<tr>
+							<th width="50">#</th>
+							<th>Item Name</th>
+							<th>Category</th>
+							<th>Rate</th>
+							<th>Unit</th>
+							<th>Notes</th>
+							<th width="150">Actions</th>
+						</tr>
+					</thead>
+					<tbody id="itemsTableBody">
+						<tr>
+							<td>1</td>
+							<td>Newspaper</td>
+							<td>Normal Recyclables</td>
+							<td>14</td>
+							<td>KG</td>
+							<td>Market rates dropped recently</td>
+							<td>
+								<button class="btn btn-sm btn-outline-primary edit-item" data-id="1">
+									<i class="bi bi-pencil"></i> Edit
+								</button>
+								<button class="btn btn-sm btn-outline-danger delete-item" data-id="1" data-name="Newspaper">
+									<i class="bi bi-trash"></i> Delete
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Split AC Copper Coil 1.5 Ton</td>
+							<td>Large Appliances</td>
+							<td>4150</td>
+							<td>Piece</td>
+							<td>Indoor + Outdoor</td>
+							<td>
+								<button class="btn btn-sm btn-outline-primary edit-item" data-id="2">
+									<i class="bi bi-pencil"></i> Edit
+								</button>
+								<button class="btn btn-sm btn-outline-danger delete-item" data-id="2" data-name="Split AC Copper Coil 1.5 Ton">
+									<i class="bi bi-trash"></i> Delete
+								</button>
+							</td>
+						</tr>
+						<!-- when empty this will be displayed -->
+						<tr id="noItemsFound" style="display: none;">
+							<td colspan="7" class="text-center py-5 text-muted">
+								<i class="bi bi-exclamation-circle fs-1"></i>
+								<h5 class="mt-3">No items found</h5>
+								<p>Try adjusting your search or filters</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal for add item -->
+<div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="addItemModalLabel">Add New Item</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form id="addItemForm">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<label class="form-label">Item Name <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" required>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Category <span class="text-danger">*</span></label>
+							<select class="form-select" required>
+								<option value="">Select Category</option>
+								<option>Normal Recyclables</option>
+								<option>Large Appliances</option>
+								<option>Small Appliances</option>
+								<option>Mobiles & Computers</option>
+								<option>Others</option>
+							</select>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Rate (Rs.) <span class="text-danger">*</span></label>
+							<input type="number" class="form-control" required>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Unit <span class="text-danger">*</span></label>
+							<select class="form-select" required>
+								<option value="">Select Unit</option>
+								<option>KG</option>
+								<option>Piece</option>
+								<option>Liter</option>
+							</select>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Image <span class="text-danger">*</span></label>
+							<input type="file" class="form-control" accept="image/*" required>
+							<small class="text-muted">Upload item image (JPEG, PNG)</small>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Notes</label>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+				<button type="submit" class="btn btn-primary" form="addItemForm">Save Item</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal for editing item -->
+<div class="modal fade" id="editItemModal" tabindex="-1" aria-labelledby="editItemModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="editItemModalLabel">Edit Item</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form id="editItemForm">
+					<div class="row g-3">
+						<div class="col-md-6">
+							<label class="form-label">Item Name <span class="text-danger">*</span></label>
+							<input type="text" class="form-control" id="editItemName" required>
+						</div>
+						<div class="col-md-6">
+							<label class="form-label">Category <span class="text-danger">*</span></label>
+							<select class="form-select" id="editItemCategory" required>
+								<option value="">Select Category</option>
+								<option>Normal Recyclables</option>
+								<option>Large Appliances</option>
+								<option>Small Appliances</option>
+								<option>Mobiles & Computers</option>
+								<option>Others</option>
+							</select>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Rate (Rs.) <span class="text-danger">*</span></label>
+							<input type="number" class="form-control" id="editItemRate" required>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Unit <span class="text-danger">*</span></label>
+							<select class="form-select" id="editItemUnit" required>
+								<option value="">Select Unit</option>
+								<option>KG</option>
+								<option>Piece</option>
+								<option>Liter</option>
+							</select>
+						</div>
+						<div class="col-md-4">
+							<label class="form-label">Image</label>
+							<input type="file" class="form-control" accept="image/*">
+							<small class="text-muted">Current: <span id="currentImageName">newspaper-report.png</span></small>
+						</div>
+						<div class="col-12">
+							<label class="form-label">Notes</label>
+							<textarea class="form-control" rows="3" id="editItemNotes"></textarea>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+				<button type="submit" class="btn btn-primary" form="editItemForm">Update Item</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- modal for deleting item -->
+<div class="modal fade" id="deleteItemModal" tabindex="-1" aria-labelledby="deleteItemModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="deleteItemModalLabel">Delete Item</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Are you sure you want to delete this item?</p>
+				<p class="fw-bold" id="itemToDeleteName"></p>
+				<p class="text-danger">This action cannot be undone.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-danger" id="confirmDeleteItem">Delete Item</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		// search and filter
+		const itemSearch = document.getElementById('itemSearch');
+		const categoryFilter = document.getElementById('categoryFilter');
+
+		function applyFilters() {
+			const searchText = itemSearch.value.toLowerCase();
+			const category = categoryFilter.value.toLowerCase();
+			let hasMatches = false;
+			const rows = document.querySelectorAll('tbody tr:not(#noItemsFound)');
+			const noItemsFound = document.getElementById('noItemsFound');
+
+			rows.forEach(function (row) {
+				const rowText = row.textContent.toLowerCase();
+				const rowCategory = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+
+				const matchesSearch = searchText === '' || rowText.includes(searchText);
+				const matchesCategory = category === '' || rowCategory.includes(category);
+
+				if (matchesSearch && matchesCategory) {
+					row.style.display = '';
+					hasMatches = true;
+				} else {
+					row.style.display = 'none';
+				}
+			});
+
+			// toggling no results message
+			noItemsFound.style.display = hasMatches ? 'none' : '';
+		}
+
+		itemSearch.addEventListener('input', applyFilters);
+		categoryFilter.addEventListener('change', applyFilters);
+
+		// reset filters
+		document.getElementById('resetFilters').addEventListener('click', function () {
+			itemSearch.value = '';
+			categoryFilter.value = '';
+			document.querySelectorAll('tbody tr').forEach(row => {
+				row.style.display = '';
+			});
+			document.getElementById('noItemsFound').style.display = 'none';
+		});
+
+		// edit item btn
+		document.addEventListener('click', function (e) {
+			if (e.target.classList.contains('edit-item')) {
+				const itemId = e.target.dataset.id;
+				const row = e.target.closest('tr');
+				const modal = document.getElementById('editItemModal');
+
+				// populating the form with existing data
+				document.getElementById('editItemName').value = row.querySelector('td:nth-child(2)').textContent;
+				document.getElementById('editItemCategory').value = row.querySelector('td:nth-child(3)').textContent;
+				document.getElementById('editItemRate').value = row.querySelector('td:nth-child(4)').textContent;
+				document.getElementById('editItemUnit').value = row.querySelector('td:nth-child(5)').textContent;
+				document.getElementById('editItemNotes').value = row.querySelector('td:nth-child(6)').textContent;
+
+				// show modal using Bootstrap
+				const bootstrapModal = new bootstrap.Modal(modal);
+				bootstrapModal.show();
+			}
+		});
+
+		// delete item btn
+		document.addEventListener('click', function (e) {
+			if (e.target.classList.contains('delete-item')) {
+				const itemId = e.target.dataset.id;
+				const itemName = e.target.dataset.name;
+				document.getElementById('itemToDeleteName').textContent = itemName;
+
+				// show modal using Bootstrap
+				const modal = document.getElementById('deleteItemModal');
+				const bootstrapModal = new bootstrap.Modal(modal);
+				bootstrapModal.show();
+			}
+		});
+
+		// confirm delete
+		document.getElementById('confirmDeleteItem').addEventListener('click', function () {
+			const itemName = document.getElementById('itemToDeleteName').textContent;
+			alert(`"${itemName}" has been deleted successfully!`);
+
+			// hide modal using Bootstrap
+			const modal = document.getElementById('deleteItemModal');
+			const bootstrapModal = bootstrap.Modal.getInstance(modal);
+			bootstrapModal.hide();
+		});
+
+		// form submission
+		document.getElementById('addItemForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+			alert('Item added successfully!');
+
+			// hide modal using Bootstrap
+			const modal = document.getElementById('addItemModal');
+			const bootstrapModal = bootstrap.Modal.getInstance(modal);
+			bootstrapModal.hide();
+		});
+
+		document.getElementById('editItemForm').addEventListener('submit', function (e) {
+			e.preventDefault();
+			alert('Item updated successfully!');
+
+			// hide modal using Bootstrap
+			const modal = document.getElementById('editItemModal');
+			const bootstrapModal = bootstrap.Modal.getInstance(modal);
+			bootstrapModal.hide();
+		});
+	});
+</script>

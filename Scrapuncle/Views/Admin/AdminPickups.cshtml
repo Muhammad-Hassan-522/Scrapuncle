@@ -1,0 +1,158 @@
+﻿@model List<Scrapuncle.Models.Pickup>
+@{
+    ViewData["Title"] = "View All Pickups";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4 mt-4">
+    <!-- header -->
+    <h2 class="fw-bold text-dark">View All Pickups</h2>
+    <p class="text-muted mb-3">Here you can view all pickups scheduled by users. You can search, filter and update the status of pickups, or even cancel them.</p>
+
+    <!-- search bar + filters -->
+    <div class="mb-3 row">
+        <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Search by user name or pickup ID" id="pickupSearch">
+        </div>
+
+        <div class="col-md-6">
+            <select class="form-select" id="statusFilter">
+                <option value="">All</option>
+                <option value="accepted">Accepted</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- pickups -->
+    <div class="card shadow-sm border-0">
+        <div class="card-header bg-white px-3 py-2 border-bottom">
+            <h5 class="mb-0">Scheduled Pickups</h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+
+                <table class="table table-bordered table-striped mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Pickup ID</th>
+                            <th>User</th>
+                            <th>Dealer</th>
+                            <th>Date/Time</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pickupsTableBody">
+                        @if (Model != null && Model.Any())
+                        {
+                            @foreach (var pickup in Model)
+                            {
+                                <tr>
+                                    <td>#@pickup.Id</td>
+                                    <td>@pickup.User.FullName</td>
+                                    <td>@(pickup.Dealer?.FullName ?? "-")</td>
+                                    <td>@pickup.PickupDate.ToString("dd MMM, yyyy") @pickup.PickupTime</td>
+                                    <td>
+                                        <span class="badge @(pickup.Status == "SCHEDULED" ? "bg-warning" : (pickup.Status == "COMPLETED" || pickup.Status == "ACCEPTED") ? "bg-success" : "bg-danger")" data-status="@pickup.Status.ToLower()">
+                                            @pickup.Status
+                                        </span>
+
+                                    </td>
+                                    <td>
+                                        <form method="post" asp-action="CancelPickup" asp-controller="Admin" style="display:inline;">
+                                            <input type="hidden" name="id" value="@pickup.Id" />
+                                            <button type="submit" class="btn btn-danger btn-sm"
+                                            @(pickup.Status == "CANCELLED" || pickup.Status == "COMPLETED" ? "disabled" : "")>
+                                                Cancel Pickup
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+
+                        }
+                        else
+                        {
+                            <tr id="noPickupsRow">
+                                <td colspan="6" class="text-center py-4">
+                                    <div class="text-muted">
+                                        <i class="bi bi-box-arrow-in-down fs-1"></i>
+                                        <h5 class="mt-2">No pickups found</h5>
+                                        <p>There are no scheduled pickups at the moment.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // search
+        document.getElementById('pickupSearch').addEventListener('input', function () {
+            const searchText = this.value.toLowerCase();
+            let hasMatches = false;
+            const rows = document.querySelectorAll('tbody tr:not(#noPickupsRow)');
+            const noPickupsRow = document.getElementById('noPickupsRow');
+
+            rows.forEach(function (row) {
+                const rowText = row.textContent.toLowerCase();
+                if (rowText.includes(searchText)) {
+                    row.style.display = '';
+                    hasMatches = true;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            // toggling no pickups message
+            if (!hasMatches && searchText.length > 0) {
+                noPickupsRow.style.display = '';
+            } else {
+                noPickupsRow.style.display = 'none';
+            }
+        });
+
+        // filtering by status
+        document.getElementById('statusFilter').addEventListener('change', function () {
+            const statusFilter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            const noPickupsRow = document.getElementById('noPickupsRow');
+            let hasMatches = false;
+
+            rows.forEach(function (row) {
+                if (row.id === 'noPickupsRow') return;
+
+                const statusElement = row.querySelector('td:nth-child(5) span');
+                const pickupStatus = statusElement ? statusElement.dataset.status : '';
+
+                if (statusFilter === "" || pickupStatus === statusFilter) {
+                    row.style.display = '';
+                    hasMatches = true;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            if (!hasMatches) {
+                noPickupsRow.style.display = '';
+            } else {
+                noPickupsRow.style.display = 'none';
+            }
+        });
+
+        // cancel pickup btn
+        document.addEventListener('click', function (event) {
+            if (event.target.classList.contains('cancel-btn')) {
+                const pickupId = event.target.dataset.pickupid;
+                alert('Pickup ID ' + pickupId + ' has been cancelled.');
+            }
+        });
+    });
+</script>

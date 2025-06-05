@@ -1,0 +1,281 @@
+﻿@{
+   Layout = "_Layout";
+    ViewData["Title"] = "Schedule A Pickup";
+}
+
+
+<style>
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .address-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .address-item.selected {
+        background-color: #e9f5ee;
+        border-color: #198754 !important;
+    }
+</style>
+
+<div class="container mx-0">
+
+    <!-- back button -->
+    <div class="d-flex align-items-center mb-4">
+        <a asp-controller="User" asp-action="UserDashboard" class="text-dark me-3">
+            <img src="~/images/arrow-left.svg" alt="Back">
+        </a>
+    </div>
+
+    <!-- form section -->
+    <div class="row">
+        <div class="col-md-6 row">
+            <form asp-controller="User" asp-action="SchedulePickup" method="post" id="pickupForm" class="form-container">
+
+                <!-- date input -->
+                <div class="mb-3 col-6 pe-2">
+                    <label class="form-label fw-semibold" for="pickupDate">Enter Date</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border">
+                            <img src="~/images/calendar.svg" alt="Calendar">
+                        </span>
+                        <input type="date" id="pickupDate" name="PickupDate" class="form-control" min="" required>
+                    </div>
+
+                    <small class="text-danger d-none" id="dateError">Please select a valid date.</small>
+                </div>
+
+                <!-- time input -->
+                <div class="mb-3 col-6 ps-2">
+                    <label class="form-label fw-semibold" for="pickupTime">Enter Time</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border">
+                            <img src="~/images/clock.svg" alt="Clock">
+                        </span>
+                        <select class="form-select" id="pickupTime" name="PickupTime" required>
+                            <option value="" disabled selected>Select Time Slot</option>
+                        </select>
+                    </div>
+
+                    <small class="text-danger d-none" id="timeError">Please select a time slot.</small>
+                </div>
+
+                <!-- full address -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold" for="fullAddress">Enter Full Address <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="fullAddress" name="FullAddress" placeholder="House no., building, apartment" required>
+                </div>
+
+                <!-- landmark -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold" for="landmark">Landmark</label>
+                    <input type="text" class="form-control" id="landmark" name="Landmark" placeholder="E.g. near Apollo Hospital">
+                </div>
+
+                <!-- pincode -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold" for="pincode">Pincode <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="pincode" name="Pincode" placeholder="6 digits [0-9] PIN code" required>
+                    <small class="text-danger d-none" id="pincodeError">Please enter a valid 6-digit pincode.</small>
+                </div>
+
+                <!-- address type -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold">Address Type</label>
+                    <div class="d-flex gap-2">
+                        <div class="btn-group w-50" role="group">
+                            <input type="radio" class="btn-check" name="AddressType" id="home" value="Home" autocomplete="off" required>
+                            <label class="btn btn-outline-secondary w-100" for="home">Home</label>
+                        </div>
+                
+                        <div class="btn-group w-50" role="group">
+                            <input type="radio" class="btn-check" name="AddressType" id="work" value="Work" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="work">Work</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- estimated weight -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold" for="estimatedWeight">Estimated Weight</label>
+                    
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border">
+                            <img src="~/images/box.svg" alt="Weight">
+                        </span>
+                        <select class="form-select" id="estimatedWeight" name="EstimatedWeight" required>
+                            <option disabled selected>Select Weight</option>
+                            <option value="5">Less than 5kg</option>
+                            <option value="5-50">5 - 50kg</option>
+                            <option value="50-100">50 - 100kg</option>
+                            <option value="100-700">100 - 700kg</option>
+                            <option value="700+">More than 700kg</option>
+                        </select>
+                    </div>
+                    
+                    <small class="text-danger d-none" id="weightError">Please select a weight range.</small>
+                </div>
+
+                <!-- remarks -->
+                <div class="mb-3 col-12">
+                    <label class="form-label fw-semibold" for="remarks">Remarks <span class="text-muted">(Optional)</span></label>
+                    <textarea class="form-control" rows="3" id="remarks" name="Remarks"></textarea>
+                </div>
+                
+                <!-- schedule button -->
+                <div class="mb-4 col-12">
+                    <button type="submit" class="btn btn-success fw-semibold py-2 px-4" id="scheduleButton">SCHEDULE A PICKUP</button>
+                </div>
+            </form>
+
+            <!-- additional info -->
+            <p class="text-muted">
+                <em>To view the scheduled pickups, click <a asp-controller="User" asp-action="CheckPickups" class="text-success fw-semibold">Check My Pickups</a></em>
+            </p>
+
+            <p class="text-muted">
+                <em>Facing Problems? Call us at <span class="text-success">+918595358613</span></em>
+            </p>
+            
+            <div class="d-flex align-items-center mt-3">
+                <img src="~/images/question-circle.svg" alt="Info Icon" class="me-2">
+                <span class="fw-bold">PLEASE FILL ALL THE REQUIRED DETAILS TO SCHEDULE PICKUP</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dateInput = document.getElementById("pickupDate");
+        const timeSelect = document.getElementById("pickupTime");
+        const pickupForm = document.getElementById("pickupForm");
+        const pincodeInput = document.getElementById("pincode");
+
+        // set min attribute to today
+        const today = new Date().toISOString().split("T")[0];
+        dateInput.min = today;
+
+        // updating time slots based on selected date
+        dateInput.addEventListener("change", updateAvailableTimeSlots);
+
+        // validate pincode
+        pincodeInput.addEventListener("input", validatePincode);
+
+        // form validation
+        pickupForm.addEventListener("submit", validateForm);
+
+        function updateAvailableTimeSlots() {
+            const selectedDate = new Date(dateInput.value);
+            const now = new Date();
+            let timeOptions = [];
+
+            if (!dateInput.value) {
+                timeSelect.innerHTML = `<option value="" disabled selected>Select Time Slot</option>`;
+                return;
+            }
+
+            if (selectedDate.toDateString() === now.toDateString()) { // Check if the selected date is today
+                const currentHour = now.getHours();
+
+                // if current time is after 8PM
+                if (currentHour >= 20) {
+                    timeSelect.innerHTML = `<option value="" disabled selected>Please select a different date</option>`;
+                    return;
+                }
+
+                if (currentHour < 15) { // if current time is before 3PM
+                    timeOptions = [
+                        { value: "11-15", text: "11 AM - 3 PM" },
+                        { value: "15-20", text: "3 PM - 8 PM" }
+                    ];
+                } else {
+                    timeOptions = [{ value: "15-20", text: "3 PM - 8 PM" }]; // if current time is between 3PM and 8PM
+                }
+            } else { // for future dates showing both options
+                timeOptions = [
+                    { value: "11-15", text: "11 AM - 3 PM" },
+                    { value: "15-20", text: "3 PM - 8 PM" }
+                ];
+            }
+
+            // updating dropdown options
+            timeSelect.innerHTML = `<option value="" disabled selected>Select Time Slot</option>`;
+            timeOptions.forEach(option => {
+                const opt = document.createElement("option");
+                opt.value = option.value;
+                opt.textContent = option.text;
+                timeSelect.appendChild(opt);
+            });
+        }
+
+        function validatePincode() {
+            const pincode = pincodeInput.value.trim();
+            const pincodeError = document.getElementById("pincodeError");
+            
+            if (pincode && !/^\d{6}$/.test(pincode)) {
+                pincodeError.classList.remove("d-none");
+                return false;
+            } else {
+                pincodeError.classList.add("d-none");
+                return true;
+            }
+        }
+
+        function validateForm(event) {
+            const date = dateInput.value;
+            const time = timeSelect.value;
+            const fullAddress = document.getElementById("fullAddress").value.trim();
+            const pincode = document.getElementById("pincode").value.trim();
+            const addressType = document.querySelector('input[name="AddressType"]:checked');
+            const weight = document.getElementById("estimatedWeight").value;
+            let isValid = true;
+
+            // validate date
+            if (!date) {
+                document.getElementById("dateError").classList.remove("d-none");
+                isValid = false;
+            } else {
+                document.getElementById("dateError").classList.add("d-none");
+            }
+
+            // validate time
+            if (!time) {
+                document.getElementById("timeError").classList.remove("d-none");
+                isValid = false;
+            } else {
+                document.getElementById("timeError").classList.add("d-none");
+            }
+
+            // validate address
+            if (!fullAddress) {
+                isValid = false;
+            }
+
+            // validate pincode
+            if (!validatePincode()) {
+                isValid = false;
+            }
+
+            // validate address type
+            if (!addressType) {
+                isValid = false;
+            }
+
+            // validate weight
+            if (!weight || weight === "Select Weight") {
+                document.getElementById("weightError").classList.remove("d-none");
+                isValid = false;
+            } else {
+                document.getElementById("weightError").classList.add("d-none");
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        }
+    });
+</script>

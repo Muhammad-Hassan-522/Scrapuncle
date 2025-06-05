@@ -1,0 +1,132 @@
+﻿@model List<Pickup>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Check Pickups";
+
+    var currentStatus = ViewBag.CurrentStatus as string ?? "SCHEDULED";
+    int currentPage = ViewBag.CurrentPage ?? 1;
+    int itemsPerPage = ViewBag.ItemsPerPage ?? 5;
+    int totalItems = ViewBag.TotalItems ?? 0;
+    int totalPages = (int)Math.Ceiling((double)totalItems / itemsPerPage);
+}
+
+<div class="container my-5">
+    <!-- Tabs -->
+    <div class="d-flex px-5 mb-4">
+        @foreach (var status in new[] { "SCHEDULED", "CANCELLED", "COMPLETED" })
+        {
+            var isActive = (currentStatus == status);
+            var btnClass = status switch
+            {
+                "SCHEDULED" => isActive ? "btn-success" : "btn-outline-success",
+                "CANCELLED" => isActive ? "btn-danger" : "btn-outline-danger",
+                "COMPLETED" => isActive ? "btn-dark" : "btn-outline-dark",
+                _ => "btn-outline-secondary"
+            };
+
+            <a class="btn @btnClass rounded-pill px-4 py-2 mx-2"
+               href="@Url.Action("CheckPickups", "User", new { status = status, page = 1, itemsPerPage = itemsPerPage })">
+                @status
+            </a>
+        }
+    </div>
+
+    <!-- Pickup Cards -->
+    @if (Model.Count == 0)
+    {
+        <div class="text-center py-5">
+            <h5 class="text-muted">No @currentStatus.ToLower() pickups found</h5>
+        </div>
+    }
+    else
+    {
+        foreach (var pickup in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="border p-4 rounded bg-white">
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="mb-1 text-muted">Pickup ID</p>
+                            <h6 class="fw-bold">@pickup.Id</h6>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1 text-muted">Time Slot</p>
+                            <h6 class="fw-bold">@pickup.PickupTime</h6>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p class="mb-1 text-muted">Pickup Date</p>
+                            <h6 class="fw-bold">@pickup.PickupDate.ToString("dd MMM yyyy")</h6>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p class="mb-1 text-muted">Weight Range</p>
+                            <h6 class="fw-bold">@pickup.EstimatedWeight</h6>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p class="mb-1 text-muted">Address</p>
+                            <h6 class="fw-bold">@pickup.CompleteAddress</h6>
+                        </div>
+                        <div class="col-6 mt-3">
+                            <p class="mb-1 text-muted">Scheduled On</p>
+                            <h6 class="fw-bold">@pickup.CreatedAt.ToString("dd MMM yyyy hh:mm tt")</h6>
+                        </div>
+                        <div class="col-6 mt-3 text-end">
+                            <span class="badge bg-@GetStatusColor(pickup.Status) px-3 py-2">@pickup.Status</span>
+                        </div>
+
+                        @if (pickup.Status == "SCHEDULED")
+                        {
+                            <div class="col-12 mt-3 text-center">
+                                <form method="post" asp-action="CancelPickup" asp-controller="User">
+                                    <input type="hidden" name="pickupId" value="@pickup.Id" />
+                                    <button type="submit" class="btn btn-danger px-4">Cancel Pickup</button>
+                                </form>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
+    <!-- Pagination -->
+    <div class="d-flex align-items-center mt-4">
+        <div>
+            @if (totalPages > 1)
+            {
+                <nav>
+                    <ul class="pagination">
+                        @for (int i = 1; i <= totalPages; i++)
+                        {
+                            <li class="page-item @(i == currentPage ? "active" : "")">
+                                <a class="page-link"
+                                   href="@Url.Action("CheckPickups", "User", new { status = currentStatus, page = i, itemsPerPage = itemsPerPage })">@i</a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            }
+        </div>
+
+        <div class="px-3 mx-5">
+            <form method="get" asp-action="CheckPickups" asp-controller="User" class="d-flex align-items-center">
+                <input type="hidden" name="status" value="@currentStatus" />
+                <label class="fw-bold me-2">Show Items:</label>
+                <input type="number" name="itemsPerPage" value="@itemsPerPage" class="form-control w-auto" min="1" max="20" />
+                <input type="submit" value="Go" class="btn btn-success ms-2" />
+            </form>
+        </div>
+    </div>
+</div>
+
+@functions {
+    public string GetStatusColor(string status)
+    {
+        return status switch
+        {
+            "SCHEDULED" => "success",
+            "CANCELLED" => "danger",
+            "COMPLETED" => "dark",
+            _ => "secondary"
+        };
+    }
+}

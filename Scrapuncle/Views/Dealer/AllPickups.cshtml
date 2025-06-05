@@ -1,0 +1,209 @@
+﻿@model List<Pickup>
+
+@{
+    ViewData["Title"] = "All Pickups";
+    Layout = "~/Views/Shared/_DealerLayout.cshtml";
+}
+
+<div class="container-fluid mt-4 px-3">
+
+    <!-- Notifications -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="fas fa-check-circle me-2"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="fas fa-exclamation-circle me-2"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <!-- Header and Search -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="mb-0">All Pickups</h2>
+        <input type="text" id="searchInput" class="form-control form-control-sm w-auto" placeholder="Search...">
+    </div>
+
+    <!-- Filters -->
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <label class="form-label">Filter by Status</label>
+            <select id="filterStatus" class="form-select">
+                <option value="all">All</option>
+                <option value="Scheduled">Pending</option>
+                <option value="Accepted">Accepted</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">From Date</label>
+            <input type="date" class="form-control" id="fromDate" />
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">To Date</label>
+            <input type="date" class="form-control" id="toDate" />
+        </div>
+        <div class="col-md-3 d-flex align-items-end">
+            <button class="btn btn-outline-success w-100" id="applyFilters">Apply Filters</button>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Pickup ID</th>
+                            <th>Date & Time</th>
+                            <th>Customer</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                            <th>Weight (kg)</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pickupTableBody">
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var pickup in Model)
+                            {
+                                <tr data-status="@pickup.Status" data-date="@pickup.PickupDate.ToString("yyyy-MM-dd")">
+                                    <td>#@pickup.Id</td>
+                                    <td>@pickup.PickupDate.ToString("dd MMM, h:mm tt")</td>
+                                    <td>@pickup.User?.FullName</td>
+                                    <td>@pickup.CompleteAddress</td>
+                                    <td>
+                                        @if (pickup.Status == "SCHEDULED")
+                                        {
+                                            <span class="badge bg-warning text-dark">Pending</span>
+                                        }
+                                        else if (pickup.Status == "ACCEPTED")
+                                        {
+                                            <span class="badge bg-info text-dark">Accepted</span>
+                                        }
+                                        else if (pickup.Status == "COMPLETED")
+                                        {
+                                            <span class="badge bg-success">Completed</span>
+                                        }
+                                        else if (pickup.Status == "CANCELLED")
+                                        {
+                                            <span class="badge bg-danger">Cancelled</span>
+                                        }
+                                    </td>
+                                    <td>@pickup.EstimatedWeight</td>
+                                    <td>@(string.IsNullOrEmpty(pickup.Remarks) ? "-" : pickup.Remarks)</td>
+                                    <td>
+                                        @if (pickup.Status == "SCHEDULED")
+                                        {
+                                            <a href="@Url.Action("UpdatePickupStatus", "Dealer", new { id = pickup.Id, status = "ACCEPTED" })"
+                                               class="btn btn-sm btn-primary me-1">
+                                                <i class="fas fa-check-circle"></i> Accept
+                                            </a>
+                                            <a href="@Url.Action("CancelPickup", "Dealer", new { pickupId = pickup.Id })"
+                                               class="btn btn-sm btn-danger"
+                                               onclick="return confirm('Are you sure you want to cancel this pickup?');">
+                                                <i class="fas fa-times"></i> Cancel
+                                            </a>
+                                        }
+                                        else if (pickup.Status == "ACCEPTED")
+                                        {
+                                            <a href="@Url.Action("UpdatePickupStatus", "Dealer", new { id = pickup.Id, status = "COMPLETED" })"
+                                               class="btn btn-sm btn-success me-1">
+                                                <i class="fas fa-check"></i> Complete
+                                            </a>
+                                            <a href="@Url.Action("CancelPickup", "Dealer", new { pickupId = pickup.Id })"
+                                               class="btn btn-sm btn-danger"
+                                               onclick="return confirm('Are you sure you want to cancel this pickup?');">
+                                                <i class="fas fa-times"></i> Cancel
+                                            </a>
+                                        }
+                                        else if (pickup.Status == "COMPLETED" || pickup.Status == "CANCELLED")
+                                        {
+                                            <span>-</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+                <div id="noPickupsMessage" class="text-center py-3 text-muted @(Model != null && Model.Any() ? "d-none" : "")">
+                    <i class="bi bi-box"></i> No pickups found.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Filtering -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const filterStatus = document.getElementById('filterStatus');
+        const searchInput = document.getElementById('searchInput');
+        const fromDate = document.getElementById('fromDate');
+        const toDate = document.getElementById('toDate');
+        const applyFilters = document.getElementById('applyFilters');
+        const pickupTableBody = document.getElementById('pickupTableBody');
+        const noPickupsMessage = document.getElementById('noPickupsMessage');
+
+        // Auto-hide alerts
+        setTimeout(() => {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                const bsAlert = new bootstrap.Alert(alert);
+                bsAlert.close();
+            });
+        }, 5000);
+
+        // Filter logic
+        filterStatus.addEventListener('change', filterTable);
+        searchInput.addEventListener('input', filterTable);
+        applyFilters.addEventListener('click', filterTable);
+        fromDate.addEventListener('change', validateDateRange);
+        toDate.addEventListener('change', validateDateRange);
+
+        function validateDateRange() {
+            if (fromDate.value && toDate.value && fromDate.value > toDate.value) {
+                alert("From Date cannot be greater than To Date.");
+                toDate.value = '';
+            }
+        }
+
+        function filterTable() {
+            const status = filterStatus.value;
+            const searchValue = searchInput.value.toLowerCase();
+            const fromDateValue = fromDate.value;
+            const toDateValue = toDate.value;
+            let visibleRows = 0;
+
+            pickupTableBody.querySelectorAll('tr').forEach(row => {
+                const rowStatus = row.dataset.status;
+                const rowText = row.textContent.toLowerCase();
+                const rowDate = row.dataset.date;
+
+                const statusMatch = status === 'all' || rowStatus.toLowerCase() === status.toLowerCase();
+                const searchMatch = !searchValue || rowText.includes(searchValue);
+                const fromDateMatch = !fromDateValue || rowDate >= fromDateValue;
+                const toDateMatch = !toDateValue || rowDate <= toDateValue;
+
+                const showRow = statusMatch && searchMatch && fromDateMatch && toDateMatch;
+
+                row.style.display = showRow ? '' : 'none';
+                if (showRow) visibleRows++;
+            });
+
+            noPickupsMessage.classList.toggle('d-none', visibleRows > 0);
+        }
+
+        filterTable(); // Initial filter
+    });
+</script>

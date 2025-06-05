@@ -1,0 +1,529 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Scrapuncle.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Scrapuncle.bo5qdh0nx8.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\835951da-4286-4ca3-8520-dfc193dd6bfc.png",
+      "PackagePath": "staticwebassets\\images\\835951da-4286-4ca3-8520-dfc193dd6bfc.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\BikeIcon.webp",
+      "PackagePath": "staticwebassets\\images\\BikeIcon.webp"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\Books.webp",
+      "PackagePath": "staticwebassets\\images\\Books.webp"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\CarIcon.webp",
+      "PackagePath": "staticwebassets\\images\\CarIcon.webp"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\Main_Page_Illustration.png",
+      "PackagePath": "staticwebassets\\images\\Main_Page_Illustration.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\Online_calendar.png",
+      "PackagePath": "staticwebassets\\images\\Online_calendar.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\ScrapuncleHomeBanner.png",
+      "PackagePath": "staticwebassets\\images\\ScrapuncleHomeBanner.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\air-conditioner.png",
+      "PackagePath": "staticwebassets\\images\\air-conditioner.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\arrow-left.svg",
+      "PackagePath": "staticwebassets\\images\\arrow-left.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\battery.png",
+      "PackagePath": "staticwebassets\\images\\battery.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\beam.png",
+      "PackagePath": "staticwebassets\\images\\beam.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\beer.png",
+      "PackagePath": "staticwebassets\\images\\beer.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\bin.png",
+      "PackagePath": "staticwebassets\\images\\bin.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\black-laptop.png",
+      "PackagePath": "staticwebassets\\images\\black-laptop.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\box.png",
+      "PackagePath": "staticwebassets\\images\\box.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\box.svg",
+      "PackagePath": "staticwebassets\\images\\box.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\brass.png",
+      "PackagePath": "staticwebassets\\images\\brass.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\business.png",
+      "PackagePath": "staticwebassets\\images\\business.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\calendar.svg",
+      "PackagePath": "staticwebassets\\images\\calendar.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\clock.svg",
+      "PackagePath": "staticwebassets\\images\\clock.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\clothes-others.png",
+      "PackagePath": "staticwebassets\\images\\clothes-others.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\clothes.png",
+      "PackagePath": "staticwebassets\\images\\clothes.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\computer-cpu.png",
+      "PackagePath": "staticwebassets\\images\\computer-cpu.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\cooler.png",
+      "PackagePath": "staticwebassets\\images\\cooler.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\copper.png",
+      "PackagePath": "staticwebassets\\images\\copper.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\crtMonitor.png",
+      "PackagePath": "staticwebassets\\images\\crtMonitor.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\default-profile.png",
+      "PackagePath": "staticwebassets\\images\\default-profile.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\double-fridge.png",
+      "PackagePath": "staticwebassets\\images\\double-fridge.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\eco.png",
+      "PackagePath": "staticwebassets\\images\\eco.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\fan.png",
+      "PackagePath": "staticwebassets\\images\\fan.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\fridge.png",
+      "PackagePath": "staticwebassets\\images\\fridge.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\glass-bottle.png",
+      "PackagePath": "staticwebassets\\images\\glass-bottle.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\home.png",
+      "PackagePath": "staticwebassets\\images\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\hook.png",
+      "PackagePath": "staticwebassets\\images\\hook.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\lamp.png",
+      "PackagePath": "staticwebassets\\images\\lamp.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\lcdMonitor.png",
+      "PackagePath": "staticwebassets\\images\\lcdMonitor.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\location.svg",
+      "PackagePath": "staticwebassets\\images\\location.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\logo.png",
+      "PackagePath": "staticwebassets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\mbillionth.jpeg",
+      "PackagePath": "staticwebassets\\images\\mbillionth.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\microwave.png",
+      "PackagePath": "staticwebassets\\images\\microwave.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\motors.png",
+      "PackagePath": "staticwebassets\\images\\motors.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\newspaper-report.png",
+      "PackagePath": "staticwebassets\\images\\newspaper-report.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\papers.png",
+      "PackagePath": "staticwebassets\\images\\papers.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\pickAtYourAddress.png",
+      "PackagePath": "staticwebassets\\images\\pickAtYourAddress.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\printer.png",
+      "PackagePath": "staticwebassets\\images\\printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\question-circle.svg",
+      "PackagePath": "staticwebassets\\images\\question-circle.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\radiation.png",
+      "PackagePath": "staticwebassets\\images\\radiation.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\recieve_payment.png",
+      "PackagePath": "staticwebassets\\images\\recieve_payment.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\rupee.png",
+      "PackagePath": "staticwebassets\\images\\rupee.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\scheduled.png",
+      "PackagePath": "staticwebassets\\images\\scheduled.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\semi-washing-machine.png",
+      "PackagePath": "staticwebassets\\images\\semi-washing-machine.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\smart-washing-machine.png",
+      "PackagePath": "staticwebassets\\images\\smart-washing-machine.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\split-ac.png",
+      "PackagePath": "staticwebassets\\images\\split-ac.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\split-ac2ton.png",
+      "PackagePath": "staticwebassets\\images\\split-ac2ton.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\stablizer.png",
+      "PackagePath": "staticwebassets\\images\\stablizer.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\television.png",
+      "PackagePath": "staticwebassets\\images\\television.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\thumbs-up.png",
+      "PackagePath": "staticwebassets\\images\\thumbs-up.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\top-washing-machine.png",
+      "PackagePath": "staticwebassets\\images\\top-washing-machine.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\trash.svg",
+      "PackagePath": "staticwebassets\\images\\trash.svg"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\trust.png",
+      "PackagePath": "staticwebassets\\images\\trust.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\ups.png",
+      "PackagePath": "staticwebassets\\images\\ups.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\ventilation.png",
+      "PackagePath": "staticwebassets\\images\\ventilation.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\water-heater.png",
+      "PackagePath": "staticwebassets\\images\\water-heater.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\images\\window-ac.png",
+      "PackagePath": "staticwebassets\\images\\window-ac.png"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\js\\chat.js",
+      "PackagePath": "staticwebassets\\js\\chat.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Scrapuncle.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Scrapuncle.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Scrapuncle.props",
+      "PackagePath": "build\\Scrapuncle.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Scrapuncle.props",
+      "PackagePath": "buildMultiTargeting\\Scrapuncle.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Scrapuncle.props",
+      "PackagePath": "buildTransitive\\Scrapuncle.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

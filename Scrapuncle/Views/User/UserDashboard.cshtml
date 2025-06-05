@@ -1,0 +1,243 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "User Dashboard";
+}
+
+<!-- main dashboard section -->
+<div class="container-fluid vh-100 d-flex align-items-center bg-light py-5 px-3">
+    <div class="row w-100 m-0">
+
+        <!-- left section -->
+        <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-md-start text-center px-4">
+            <h1 class="fw-bold display-4">
+                Sell your recyclables <br> online with
+                <span class="text-success">ScrapUncle!</span>
+            </h1>
+
+            <p class="fw-semibold text-secondary fs-6">Paper - Plastics - Metals - Appliances</p>
+            <p class="fw-medium fs-6">
+                You can also download the
+                <a href="#" class="text-primary fw-semibold text-decoration-none">ScrapUncle App</a>
+            </p>
+
+            <img src="~/images/ScrapuncleHomeBanner.png" class="img-fluid mt-3" alt="ScrapUncle Illustration">
+        </div>
+
+        <!-- right section -->
+        <div class="col-lg-6 col-md-12 d-flex justify-content-center align-items-center mt-4 mt-lg-0">
+
+            <div class="bg-white p-4 rounded shadow-lg w-100 border border-success" style="max-width: 500px;">
+                <p class="fw-bold fs-5">Nice to see you, Hassan!</p>
+                <p class="text-secondary fs-6">Impact made by ScrapUncle</p>
+
+                <div class="bg-light p-2 rounded text-center">
+                    <h2 class="fw-bold">1,443,515 KG</h2>
+                    <p class="text-secondary">RECYCLED</p>
+                </div>
+
+                <div class="text-center">
+                    <img src="~/images/Main_Page_Illustration.png" class="img-fluid my-3" width="120" alt="Scale Image">
+                </div>
+
+                <p class="text-center fs-6">Wish to recycle more?</p>
+
+                <a asp-controller="User" asp-action="SchedulePickup" class="btn btn-success w-100 mb-2 fs-6">Schedule A Pickup Now</a>
+                <a asp-controller="User" asp-action="CheckPickups" class="btn btn-success w-100 mb-2 fs-6">Check My Pickups</a>
+                
+                <p class="text-center mt-3 text-secondary fs-6">
+                    Facing Problems? Call us at
+                    <a href="tel:+918595358613" class="text-success fw-bold fst-italic">+918595358613</a>
+                </p>
+
+                <p class="text-center">
+                    <a asp-area="Identity" asp-page="/Account/Logout" class="text-success fw-bold text-decoration-none me-3 fst-italic">Logout</a>
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- how it works -->
+<div class="container-fluid text-center py-5 px-3">
+
+    <h2 class="fw-bold">How it works</h2>
+    
+    <div class="row mt-4 g-4">
+
+        <!-- card 1 -->
+        <div class="col-md-4 col-sm-12 d-flex">
+            <div class="card bg-success text-white p-4 shadow border-0 rounded-3 w-100 d-flex flex-column">
+                <h4 class="fw-bold">Schedule a pickup</h4>
+                <div class="mt-auto">
+                    <img src="~/images/Online_calendar.png" class="img-fluid" style="max-height: 170px;" alt="Schedule Pickup">
+                </div>
+            </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="col-md-4 col-sm-12 d-flex">
+            <div class="card bg-success text-white p-4 shadow border-0 rounded-3 w-100 d-flex flex-column">
+                <h4 class="fw-bold">Pickup at your address</h4>
+                <div class="mt-auto">
+                    <img src="~/images/pickAtYourAddress.png" class="img-fluid" style="max-height: 170px;" alt="Pickup Address">
+                </div>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-4 col-sm-12 d-flex">
+            <div class="card bg-success text-white p-4 shadow border-0 rounded-3 w-100 d-flex flex-column">
+                <h4 class="fw-bold">Receive payment</h4>
+                <div class="mt-auto">
+                    <img src="~/images/recieve_payment.png" class="img-fluid" style="max-height: 170px;" alt="Receive Payment">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- award section -->
+<div class="container py-5 px-3">
+    <div class="row align-items-center text-md-start text-center">
+        <div class="col-lg-6 col-md-12">
+            <h2 class="fw-bold text-success">
+                Scrapuncle received <br> Mbillionth Award 2020
+            </h2>
+
+            <p class="fs-5 text-dark">
+                Recognized as the winner in the "Early Stage Startups" category of the Mbillionth awards South Asia organized by Digital Empowerment Foundation (DEF) & Facebook
+            </p>
+        </div>
+
+        <div class="col-lg-6 col-md-12 text-center mt-4 mt-lg-0">
+            <img src="~/images/mbillionth.jpeg" class="img-fluid" style="max-width: 250px;" alt="Mbillionth Award">
+        </div>
+
+    </div>
+</div>
+
+<!-- why us section -->
+<div class="container-fluid bg-success text-center py-5 px-0">
+
+    <h2 class="fw-bold text-white">Why us</h2>
+    
+    <div class="row mt-4 g-4 px-md-3 mx-0">
+    
+        <!-- card 1 -->
+        <div class="col-md-3 d-flex">
+            <div class="card shadow-sm border-0 rounded-4 p-3 h-100 d-flex flex-column justify-content-between">
+                
+                <div class="d-flex flex-column align-items-center">
+                    <img src="~/images/rupee.png" class="img-fluid mb-2" style="max-width: 70px;" alt="Best Rates">
+                    <h5 class="fw-bold text-secondary">Best Rates</h5>
+                </div>
+                
+                <p class="text-center text-secondary">
+                    We provide the best value for your scrap from our network of Recyclers.
+                </p>
+            </div>
+        </div>
+        <!-- card 2 -->
+        <div class="col-md-3 d-flex">
+            <div class="card shadow-sm border-0 rounded-4 p-3 h-100 d-flex flex-column justify-content-between">
+                
+                <div class="d-flex flex-column align-items-center">
+                    <img src="~/images/thumbs-up.png" class="img-fluid mb-2" style="max-width: 70px;" alt="Convenience">
+                    <h5 class="fw-bold text-secondary">Convenience</h5>
+                </div>
+                
+                <p class="text-center text-secondary">
+                    Doorstep pickup according to user's convenient date & time.
+                </p>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-3 d-flex">
+            <div class="card shadow-sm border-0 rounded-4 p-3 h-100 d-flex flex-column justify-content-between">
+        
+                <div class="d-flex flex-column align-items-center">
+                    <img src="~/images/trust.png" class="img-fluid mb-2" style="max-width: 70px;" alt="Trust">
+                    <h5 class="fw-bold text-secondary">Trust</h5>
+                </div>
+                
+                <p class="text-center text-secondary">
+                    Trained & Verified Pickup Staff with Swapeco Smart Weighing Scale.
+                </p>
+            </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="col-md-3 d-flex">
+            <div class="card shadow-sm border-0 rounded-4 p-3 h-100 d-flex flex-column justify-content-between">
+        
+                <div class="d-flex flex-column align-items-center">
+                    <img src="~/images/eco.png" class="img-fluid mb-2" style="max-width: 70px;" alt="Eco-friendly">
+                    <h5 class="fw-bold text-secondary">Eco-friendly</h5>
+                </div>
+                
+                <p class="text-center text-secondary">We ensure responsible recycling of your scrap items.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- households and businesses section -->
+<div class="container text-center py-5">
+    <h2 class="text-success fw-bold">
+        Households & Businesses have different needs<br> and we cater to each of them
+    </h2>
+</div>
+
+<div class="container py-5">
+    <div class="row align-items-center text-center">
+        
+        <div class="col-md-6">
+            <h4 class="fw-bold text-dark">For Households</h4>
+        
+            <ul class="list-unstyled text-start mx-auto" style="max-width: 300px;">
+                <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> On-Demand Doorstep Pickups
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Accurate Digital Weighing
+                </li>
+                <li class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Safety (Trained & Verified Staff)
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <img src="~/images/home.png" class="img-fluid" style="max-width: 300px;" alt="Home Image">
+        </div>
+
+    </div>
+
+    <div class="row align-items-center text-center mt-4">
+        <div class="col-md-6">
+            <img src="~/images/business.png" class="img-fluid" style="max-width: 300px;" alt="Business Image">
+        </div>
+
+        <div class="col-md-6">
+        
+            <h4 class="fw-bold text-dark">For Businesses</h4>
+            
+            <ul class="list-unstyled text-start mx-auto" style="max-width: 300px;">
+                <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Formal Payments & Documentation
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Sustainability Reports
+                </li>
+                <li class="d-flex align-items-center">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i> Competitive Prices
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

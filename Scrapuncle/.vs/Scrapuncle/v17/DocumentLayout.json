@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5C585225-53EB-4198-B071-7EBD6451F87E}|Scrapuncle.csproj|c:\\users\\hassan\\desktop\\d\\semester 6\\enterprise systems\\zzz\\submission\\scrapuncle\\controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C585225-53EB-4198-B071-7EBD6451F87E}|Scrapuncle.csproj|solutionrelative:controllers\\dealercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C585225-53EB-4198-B071-7EBD6451F87E}|Scrapuncle.csproj|c:\\users\\hassan\\desktop\\d\\semester 6\\enterprise systems\\zzz\\submission\\scrapuncle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C585225-53EB-4198-B071-7EBD6451F87E}|Scrapuncle.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DealerController.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\Controllers\\DealerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DealerController.cs",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\Controllers\\DealerController.cs",
+              "RelativeToolTip": "Controllers\\DealerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:36:35.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hassan\\Desktop\\D\\Semester 6\\Enterprise Systems\\ZZZ\\Submission\\Scrapuncle\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T07:36:12.838Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

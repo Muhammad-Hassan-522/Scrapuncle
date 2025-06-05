@@ -1,0 +1,480 @@
+﻿@{
+    ViewData["Title"] = "Scrap Rates";
+    Layout = ViewBag.Layout ?? "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- notes -->
+<div class="container-fluid mt-4 px-3">
+    <div class="p-4 bg-primary bg-opacity-10 rounded-3 w-100">
+
+        <h5 class="fw-bold text-secondary">Notes</h5>
+        
+        <ul class="mb-0 text-secondary">
+            <li>The prices may vary with fluctuation in the scrap market.</li>
+            <li>
+                Prices may be different for bulk pickups. Call us at
+                <a href="tel:+918595358613" class="text-success fw-semibold">+91-8595358613</a>
+                to get a quote for bulk pickup.
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- normal recyclables -->
+<div class="container-fluid text-center py-4 px-0">
+
+    <h3 class="fw-bold">Normal Recyclables</h3>
+
+    <div class="row mx-0 mt-4 g-4">
+    
+        <!-- item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/newspaper-report.png" class="img-fluid" style="max-width: 50px;" alt="Newspaper">
+                <p class="text-success mt-2 small">RS 14/KG</p>
+            </div>
+        
+            <p class="mt-2 small">NEWSPAPER <br> **MARKET RATES DROPPED RECENTLY</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/clothes.png" class="img-fluid" style="max-width: 50px;" alt="Clothes">
+                <p class="text-success mt-2 small">RS 2/KG</p>
+            </div>
+            
+            <p class="mt-2 small">CLOTHES (ACCEPTED ONLY WHEN GIVEN WITH OTHER SCRAP ITEMS) (WE DON'T ACCEPT UNDERGARMENTS)</p>
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/glass-bottle.png" class="img-fluid" style="max-width: 50px;" alt="Glass Bottles">
+                <p class="text-success mt-2 small">RS 2/KG</p>
+            </div>
+            
+            <p class="mt-2 small">GLASS BOTTLES (ACCEPTED ONLY WHEN GIVEN WITH OTHER SCRAP ITEMS)</p>
+        </div>
+
+        <!-- item 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/papers.png" class="img-fluid" style="max-width: 50px;" alt="Office Paper">
+                <p class="text-success mt-2 small">RS 14/KG</p>
+            </div>
+            
+            <p class="mt-2 small">OFFICE PAPER (A3/A4)</p>
+        </div>
+
+        <!-- item 5 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/Books.webp" class="img-fluid" style="max-width: 50px;" alt="Books">
+                <p class="text-success mt-2 small">RS 12/KG</p>
+            </div>
+            
+            <p class="mt-2 small">COPIES/BOOKS</p>
+        </div>
+
+        <!-- item 6 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/box.png" class="img-fluid" style="max-width: 50px;" alt="Cardboard">
+                <p class="text-success mt-2 small">RS 8/KG</p>
+            </div>
+            
+            <p class="mt-2 small">CARDBOARD <br> **TO GET QUOTE FOR BULK QTY. CALL AT +91-8595358613</p>
+        </div>
+
+        <!-- item 7 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/bin.png" class="img-fluid" style="max-width: 50px;" alt="PET Bottles">
+                <p class="text-success mt-2 small">RS 8/KG</p>
+            </div>
+            
+            <p class="mt-2 small">PET BOTTLES/OTHER PLASTIC</p>
+        </div>
+
+        <!-- item 8 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/beam.png" class="img-fluid" style="max-width: 50px;" alt="Iron">
+                <p class="text-success mt-2 small">RS 26/KG</p>
+            </div>
+            
+            <p class="mt-2 small">IRON <br> **TO GET QUOTE FOR BULK QTY. CALL AT +91-8595358613</p>
+        </div>
+
+        <!-- item 9 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/hook.png" class="img-fluid" style="max-width: 50px;" alt="Steel Utensils">
+                <p class="text-success mt-2 small">RS 40/KG</p>
+            </div>
+            
+            <p class="mt-2 small">STEEL UTENSILS</p>
+        </div>
+
+        <!-- item 10 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/beer.PNG" class="img-fluid" style="max-width: 50px;" alt="Aluminium">
+                <p class="text-success mt-2 small">RS 105/KG</p>
+            </div>
+            
+            <p class="mt-2 small">ALUMINIUM</p>
+        </div>
+
+        <!-- item 11 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/brass.png" class="img-fluid" style="max-width: 50px;" alt="Brass">
+                <p class="text-success mt-2 small">RS 305/KG</p>
+            </div>
+            
+            <p class="mt-2 small">BRASS</p>
+        </div>
+
+        <!-- item 12 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/copper.png" class="img-fluid" style="max-width: 50px;" alt="Copper">
+                <p class="text-success mt-2 small">RS 425/KG</p>
+            </div>
+            
+            <p class="mt-2 small">COPPER</p>
+        </div>
+    </div>
+</div>
+
+<!-- large appliances -->
+<div class="container-fluid text-center py-4 px-0">
+
+    <h3 class="fw-bold">Large Appliances</h3>
+
+    <div class="row mx-0 mt-4 g-4">
+    
+        <!-- item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/air-conditioner.png" class="img-fluid" style="max-width: 50px;" alt="Split AC">
+                <p class="text-success mt-2 small">RS 4150/PIECE</p>
+            </div>
+        
+            <p class="mt-2 small">SPLIT AC COPPER COIL 1.5 TON (INDOOR + OUTDOOR)</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/window-ac.png" class="img-fluid" style="max-width: 50px;" alt="Window AC">
+                <p class="text-success mt-2 small">RS 4050/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">WINDOW AC 1.5 TON (COPPER COIL)</p>
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/split-ac.png" class="img-fluid" style="max-width: 50px;" alt="Split AC">
+                <p class="text-success mt-2 small">RS 3000/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">SPLIT/WINDOW AC 1 TON (COPPER COIL)</p>
+        </div>
+
+        <!-- item 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/smart-washing-machine.png" class="img-fluid" style="max-width: 50px;" alt="Washing Machine">
+                <p class="text-success mt-2 small">RS 1350/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">FRONT LOAD FULLY AUTOMATIC WASHING MACHINE</p>
+        </div>
+
+        <!-- item 5 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/split-ac2ton.png" class="img-fluid" style="max-width: 50px;" alt="AC">
+                <p class="text-success mt-2 small">RS 5600/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">WINDOW/SPLIT AC 2 TON (COPPER COIL)</p>
+        </div>
+
+        <!-- item 6 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/top-washing-machine.png" class="img-fluid" style="max-width: 50px;" alt="Washing Machine">
+                <p class="text-success mt-2 small">RS 1000/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">TOP LOAD FULLY AUTOMATIC</p>
+        </div>
+
+        <!-- item 7 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/semi-washing-machine.png" class="img-fluid" style="max-width: 50px;" alt="Washing Machine">
+                <p class="text-success mt-2 small">RS 750/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">SEMI AUTOMATIC WASHING MACHINE</p>
+        </div>
+
+        <!-- item 8 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/water-heater.png" class="img-fluid" style="max-width: 50px;" alt="Geyser">
+                <p class="text-success mt-2 small">RS 20/KG</p>
+            </div>
+            
+            <p class="mt-2 small">GEYSER</p>
+        </div>
+
+        <!-- item 9 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/fridge.png" class="img-fluid" style="max-width: 50px;" alt="Fridge">
+                <p class="text-success mt-2 small">RS 1100/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">SINGLE DOOR FRIDGE</p>
+        </div>
+
+        <!-- item 10 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/double-fridge.png" class="img-fluid" style="max-width: 50px;" alt="Fridge">
+                <p class="text-success mt-2 small">RS 1350/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">DOUBLE DOOR FRIDGE</p>
+        </div>
+
+        <!-- item 11 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/ventilation.png" class="img-fluid" style="max-width: 50px;" alt="Iron Cooler">
+                <p class="text-success mt-2 small">RS 30/KG</p>
+            </div>
+            
+            <p class="mt-2 small">IRON COOLER</p>
+        </div>
+
+        <!-- item 12 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/cooler.png" class="img-fluid" style="max-width: 50px;" alt="Plastic Cooler">
+                <p class="text-success mt-2 small">RS 15/KG</p>
+            </div>
+            
+            <p class="mt-2 small">PLASTIC COOLER</p>
+        </div>
+    </div>
+</div>
+
+<!-- small appliances -->
+<div class="container-fluid text-center py-4 px-0">
+    
+    <h3 class="fw-bold">Small Appliances</h3>
+    
+    <div class="row mx-0 mt-4 g-4">
+    
+        <!-- item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/printer.png" class="img-fluid" style="max-width: 50px;" alt="Printer">
+                <p class="text-success mt-2 small">RS 20/KG</p>
+            </div>
+        
+            <p class="mt-2 small">PRINTER/SCANNER/FAX MACHINE</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/radiation.png" class="img-fluid" style="max-width: 50px;" alt="Metal E-Waste">
+                <p class="text-success mt-2 small">RS 28/KG</p>
+            </div>
+            
+            <p class="mt-2 small">METAL E-WASTE</p>
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/lamp.png" class="img-fluid" style="max-width: 50px;" alt="Plastic E-Waste">
+                <p class="text-success mt-2 small">RS 15/KG</p>
+            </div>
+            
+            <p class="mt-2 small">PLASTIC E-WASTE</p>
+        </div>
+
+        <!-- item 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/television.png" class="img-fluid" style="max-width: 50px;" alt="CRT TV">
+                <p class="text-success mt-2 small">RS 200/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">CRT TV</p>
+        </div>
+
+        <!-- item 5 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/fan.png" class="img-fluid" style="max-width: 50px;" alt="Ceiling Fan">
+                <p class="text-success mt-2 small">RS 35/KG</p>
+            </div>
+            
+            <p class="mt-2 small">CEILING FAN</p>
+        </div>
+
+        <!-- item 6 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/motors.png" class="img-fluid" style="max-width: 50px;" alt="Motors">
+                <p class="text-success mt-2 small">RS 35/KG</p>
+            </div>
+            
+            <p class="mt-2 small">MOTORS (COPPER WIRING)</p>
+        </div>
+
+        <!-- item 7 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/microwave.png" class="img-fluid" style="max-width: 50px;" alt="Microwave">
+                <p class="text-success mt-2 small">RS 350/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">MICROWAVE</p>
+        </div>
+
+        <!-- item 8 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/ups.png" class="img-fluid" style="max-width: 50px;" alt="UPS">
+                <p class="text-success mt-2 small">RS 180/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">UPS</p>
+        </div>
+
+        <!-- item 9 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/stablizer.png" class="img-fluid" style="max-width: 50px;" alt="Inverter">
+                <p class="text-success mt-2 small">RS 40/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">INVERTER/STABLIZER (COPPER COIL)</p>
+        </div>
+
+        <!-- item 10 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/battery.png" class="img-fluid" style="max-width: 50px;" alt="Battery">
+                <p class="text-success mt-2 small">RS 81/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">BATTERY (USED WITH INVERTERS)</p>
+        </div>
+    </div>
+</div>
+
+<!-- mobiles & computers -->
+<div class="container-fluid text-center py-4 px-0">
+    
+    <h3 class="fw-bold">Mobiles & Computers</h3>
+    
+    <div class="row mx-0 mt-4 g-4">
+    
+        <!-- item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/black-laptop.png" class="img-fluid" style="max-width: 50px;" alt="Laptop">
+                <p class="text-success mt-2 small">RS 300/PIECE</p>
+            </div>
+        
+            <p class="mt-2 small">SCRAP LAPTOP</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/crtMonitor.png" class="img-fluid" style="max-width: 50px;" alt="CRT Monitor">
+                <p class="text-success mt-2 small">RS 150/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">CRT MONITOR</p>
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/lcdMonitor.png" class="img-fluid" style="max-width: 50px;" alt="LCD Monitor">
+                <p class="text-success mt-2 small">RS 20/KG</p>
+            </div>
+            
+            <p class="mt-2 small">LCD MONITOR</p>
+        </div>
+
+        <!-- item 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/computer-cpu.png" class="img-fluid" style="max-width: 50px;" alt="CPU">
+                <p class="text-success mt-2 small">RS 225/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">COMPUTER CPU</p>
+        </div>
+    </div>
+</div>
+
+<!-- others -->
+<div class="container-fluid text-center py-4 px-0">
+    
+    <h3 class="fw-bold">Others</h3>
+    
+    <div class="row mx-0 mt-4 g-4">
+    
+        <!-- item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/BikeIcon.webp" class="img-fluid" style="max-width: 50px;" alt="Bike">
+                <p class="text-success mt-2 small">RS 2100/PIECE</p>
+            </div>
+        
+            <p class="mt-2 small">BIKE</p>
+        </div>
+
+        <!-- item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/clothes-others.png" class="img-fluid" style="max-width: 50px;" alt="Clothes">
+                <p class="text-success mt-2 small">RS 2/KG</p>
+            </div>
+            
+            <p class="mt-2 small">
+                CLOTHES (ACCEPTED ONLY WHEN GIVEN WITH OTHER SCRAP ITEMS) <br>
+                (WE DON'T ACCEPT UNDERGARMENTS)
+            </p>
+        </div>
+
+        <!-- item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 d-flex flex-column align-items-center">
+            <div class="shadow-lg p-4 rounded-4 bg-white d-flex flex-column justify-content-center align-items-center" style="width: 150px; height: 150px;">
+                <img src="~/images/CarIcon.webp" class="img-fluid" style="max-width: 50px;" alt="Car">
+                <p class="text-success mt-2 small">RS 20000/PIECE</p>
+            </div>
+            
+            <p class="mt-2 small">CAR</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Dealer Dashboard";
+    Layout = "~/Views/Shared/_DealerLayout.cshtml";
+}
+
+<div class="container-fluid mt-4 px-3 px-md-4">
+    <!-- header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-dark mb-0">Dealer Dashboard</h2>
+    </div>
+
+    <!-- stats cards -->
+    <div class="row mb-4 g-3">
+        <div class="col-6 col-md-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-primary bg-opacity-10 p-2 rounded me-3">
+                            <i class="fas fa-boxes text-primary"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-muted mb-1">Total Pickups</h6>
+                            <h4 class="fw-bold mb-0">@Model.TotalPickups</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* <div class="col-6 col-md-4"> *@
+        @*     <div class="card border-0 shadow-sm h-100"> *@
+        @*         <div class="card-body"> *@
+        @*             <div class="d-flex align-items-center"> *@
+        @*                 <div class="bg-warning bg-opacity-10 p-2 rounded me-3"> *@
+        @*                     <i class="fas fa-clock text-warning"></i> *@
+        @*                 </div> *@
+        @*                 <div> *@
+        @*                     <h6 class="text-muted mb-1">Pending</h6> *@
+        @*                     <h4 class="fw-bold mb-0">@Model.PendingPickups</h4> *@
+        @*                 </div> *@
+        @*             </div> *@
+        @*         </div> *@
+        @*     </div> *@
+        @* </div> *@
+        <div class="col-6 col-md-6">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-success bg-opacity-10 p-2 rounded me-3">
+                            <i class="fas fa-check-circle text-success"></i>
+                        </div>
+                        <div>
+                            <h6 class="text-muted mb-1">Completed Today</h6>
+                            <h4 class="fw-bold mb-0">@Model.CompletedToday</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* <div class="col-6 col-md-3"> *@
+        @*     <div class="card border-0 shadow-sm h-100"> *@
+        @*         <div class="card-body"> *@
+        @*             <div class="d-flex align-items-center"> *@
+        @*                 <div class="bg-info bg-opacity-10 p-2 rounded me-3"> *@
+        @*                     <i class="fas fa-rupee-sign text-info"></i> *@
+        @*                 </div> *@
+        @*                 <div> *@
+        @*                     <h6 class="text-muted mb-1">Total Earnings</h6> *@
+        @*                     <h4 class="fw-bold mb-0">Rs. @Model.TotalEarnings</h4> *@
+        @*                 </div> *@
+        @*             </div> *@
+        @*         </div> *@
+        @*     </div> *@
+        @* </div> *@
+    </div>
+
+    <!-- pickup table -->
+    <div class="card border-0 shadow-sm">
+        <div class="card-header bg-white d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+            <h5 class="fw-semibold mb-2 mb-md-0">Your Pickups</h5>
+            <div class="d-flex flex-column flex-md-row gap-2 w-100 w-md-auto">
+                <select id="statusFilter" class="form-select form-select-sm">
+                    <option value="all">All Status</option>
+                    <option value="accepted">Accepted</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <a href="/Dealer/AllPickups" class="btn btn-sm btn-outline-primary">
+                    <i class="fas fa-list me-1"></i> View All
+                </a>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="ps-4">Pickup ID</th>
+                            <th>Date & Time</th>
+                            <th>Address</th>
+                            <th class="text-center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pickupTable">
+                        @* <tr data-status="pending"> *@
+                        @*     <td class="ps-4 fw-semibold">#1001</td> *@
+                        @*     <td> *@
+                        @*         <div class="d-flex flex-column"> *@
+                        @*             <span>10 Apr 2024</span> *@
+                        @*             <small class="text-muted">2:00 PM - 4:00 PM</small> *@
+                        @*         </div> *@
+                        @*     </td> *@
+                        @*     <td>123 Main St, Pune - 411001</td> *@
+                        @*     <td class="text-center"> *@
+                        @*         <span class="badge bg-warning text-dark px-3 py-1">Pending</span> *@
+                        @*     </td> *@
+                        @* </tr> *@
+                        
+                        @* <tr data-status="completed"> *@
+                        @*     <td class="ps-4 fw-semibold">#1000</td> *@
+                        @*     <td> *@
+                        @*         <div class="d-flex flex-column"> *@
+                        @*             <span>9 Apr 2024</span> *@
+                        @*             <small class="text-muted">11:00 AM - 1:00 PM</small> *@
+                        @*         </div> *@
+                        @*     </td> *@
+                        @*     <td>456 Oak Ave, Mumbai - 400001</td> *@
+                        @*     <td class="text-center"> *@
+                        @*         <span class="badge bg-success px-3 py-1">Completed</span> *@
+                        @*     </td> *@
+                        @* </tr> *@
+
+                        @foreach (var pickup in Model.RecentPickups)
+                        {
+                            <tr data-status="@pickup.Status.ToLower()">
+                                <td class="ps-4 fw-semibold">#@pickup.Id</td>
+                                <td>
+                                    <div class="d-flex flex-column">
+                                        <span>@pickup.PickupDate.ToString("dd MMM yyyy")</span>
+                                        @* <small class="text-muted">@pickup.CreatedAt</small> *@
+                                    </div>
+                                </td>
+                                <td>@pickup.CompleteAddress</td>
+                                <td class="text-center">
+                                    @if (pickup.Status == "COMPLETED")
+                                    {
+                                        <span class="badge bg-success px-3 py-1">Completed</span>
+                                    }
+                                    else if (pickup.Status == "ACCEPTED")
+                                    {
+                                        <span class="badge bg-success px-3 py-1">Accepted</span>
+                                    }
+                                    @* else *@
+                                    @* { *@
+                                    @*     <span class="badge bg-danger px-3 py-1">Cancelled</span> *@
+                                    @* } *@
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+                <!-- message for no pickups -->
+                <div id="noPickupsMessage" class="text-center py-5 text-muted" style="display: none;">
+                    <i class="fas fa-box-open fs-1 mb-3"></i>
+                    <h5>No pickups found</h5>
+                    <p class="mb-0">When you have new pickups, they'll appear here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const statusFilter = document.getElementById('statusFilter');
+        const noPickupsMessage = document.getElementById('noPickupsMessage');
+        const tableRows = document.querySelectorAll('tbody tr');
+
+        // status filter
+        statusFilter.addEventListener('change', function () {
+            const status = this.value;
+            let visibleRows = 0;
+
+            tableRows.forEach(row => {
+                const rowStatus = row.dataset.status;
+                const shouldShow = status === 'all' || rowStatus === status;
+
+                row.style.display = shouldShow ? '' : 'none';
+                if (shouldShow) visibleRows++;
+            });
+
+            // toggling empty state message
+            noPickupsMessage.style.display = visibleRows ? 'none' : 'block';
+        });
+
+    });
+</script>
